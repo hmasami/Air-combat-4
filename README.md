@@ -50,6 +50,15 @@ signate download --task_key=ddc905b07101400b83e5a43d3e7c7b72 --file_key=6b68e0c2
 signate download --task_key=ddc905b07101400b83e5a43d3e7c7b72 --file_key=267edaec70cd474798ff02b764e8264f
 ```
 
+### 6. 不要ファイルの削除
+
+zipファイルを解凍するとZone.Identifierファイルが大量にできるのでpowershellで以下のコマンドを実行
+
+```bash
+Get-ChildItem -Recurse -Filter "*Zone.Identifier*" | Remove-Item -Force
+```
+以降READMEに従って環境構築する
+
 ※ ZIP ファイルは `.gitignore` に追加してください（GitHub の 100MB 制限回避のため）
 
 ```bash
