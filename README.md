@@ -38,15 +38,16 @@ signate token -e あなたの登録メールアドレス
 
 ※ パスワード入力後、API トークンが `~/.signate/signate.json` に保存されます。
 
-> Google アカウントログインの場合は、[パスワードリセット](https://signate.jp) からメールアドレス＋パスワード方式に変更してください。
+> Google アカウントログインの場合は、一度サインアウトした後に[パスワードリセット](https://user.cloud.signate.jp/individual/sign_in) からメールアドレス＋パスワード方式に変更してください。
 
 ### 5. データのダウンロード例（ユース部門）
 
 ```bash
 signate competition-list
-signate task-list --competition_key <コンペキー>
-signate file-list --task_key=<タスクキー>
-signate download --task_key=<タスクキー> --file_key=<ファイルキー>
+signate task-list --competition_key de1556abda294254b30bdec61520f764
+signate file-list --task_key= ddc905b07101400b83e5a43d3e7c7b72
+signate download --task_key=ddc905b07101400b83e5a43d3e7c7b72 --file_key=6b68e0c236204f1bbf586813064fd50a
+signate download --task_key=ddc905b07101400b83e5a43d3e7c7b72 --file_key=267edaec70cd474798ff02b764e8264f
 ```
 
 ※ ZIP ファイルは `.gitignore` に追加してください（GitHub の 100MB 制限回避のため）
